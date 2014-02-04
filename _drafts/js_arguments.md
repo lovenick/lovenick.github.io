@@ -3,8 +3,10 @@ When working with Javascript you'll quickly discover that functions don't requir
   myFunc(arg1);
 
 Or I could pass in five:
-  
-    myFunc(arg1, arg2, arg3, arg4, arg5);
+
+{% highlight javascript %}
+  myFunc(arg1, arg2, arg3, arg4, arg5);
+{% endhighlight %}
     
 When instantiating a function, it really doesn't matter. It all depends on whether the code block within the function accesses the arguments. If it doesn't, they're simply ignored.
 
