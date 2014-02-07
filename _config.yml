@@ -13,9 +13,9 @@ owner:
   bio:            "Software engineer, designer and javascript ninja. Building websites since 2001"
   email:          nick@fusemedia.ca
   # Social networking links used in footer. Update and remove as you like.
-  twitter:        
-  facebook:       
-  github:         lovenick   
+  twitter:        https://twitter.com/nickloveridge
+  facebook:       http://www.linkedin.com/in/nickloveridge
+  github:         https://github.com/lovenick   
   stackexchange:  
   linkedin:       
   instagram:      
