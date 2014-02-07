@@ -9,19 +9,17 @@ Something Something Something
 
 <style>
   #boxDemo { 
-    width: 400px;
-    min-height: 400px;
+    min-height: 220px;
     margin: 20px auto;
+    padding: 20px;
     position: relative;
-    border: 1px solid red;
   }
 
   .card {
     width: 20px;
     height: 20px;
-    margin: 0px 0px 0px -130px;
     position: absolute;
-    top: 0;
+    top: 50%;
     left: 50%;
     border-radius: 50%;
     background-color: #DEDEDE;
@@ -35,6 +33,7 @@ Something Something Something
   (function(){
     var num = 25;
     var demo = document.getElementById('boxDemo');
+
     for(var i = 0; i < num; i++) {
       var card = document.createElement("div");
       card.className = "card";
