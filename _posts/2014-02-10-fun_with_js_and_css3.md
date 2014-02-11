@@ -5,7 +5,12 @@ description: "Animating DOM elements using Javascript and CSS3 transitions"
 tags: [html, css, javascript, css3, animation]
 ---
 
-Something Something Something
+Since my recent exposure to CSS3 animations at Famo.us, I've been experimenting
+with different techniques to animate DOM elements. CSS3 introduced a bunch of
+new properties that allow you to manipulate DOM elements with ease. 
+
+Below is a quick and simple example of what is possible with a little JS and the
+CSS3 transform property.
 
 <style>
   #boxDemo { 
@@ -96,7 +101,9 @@ Something Something Something
 
     };
 
-    moveCards(cards, function(){});
+    moveCards(cards, function(){
+      console.log('Animation complete');
+    });
   })();
 
 </script>
