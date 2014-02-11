@@ -12,6 +12,12 @@ new properties that allow you to manipulate DOM elements with ease.
 Below is a quick and simple example of what is possible with a little JS and the
 CSS3 transform property.
 
+<div id="boxDemo"></div>
+
+<div id="slideDemo">
+  <div class="slideCircle"></div>
+</div>
+
 <style>
   #boxDemo { 
     min-height: 220px;
@@ -30,12 +36,29 @@ CSS3 transform property.
     background-color: #DEDEDE;
     box-shadow: 0px 1px 0px rgba(255,255,255,1), 0px 1px 0px rgba(0,0,0,0.1) inset;
   }
-</style>
 
-<div id="boxDemo"></div>
+  #slideDemo {
+    height: 80px;
+    width: 300px;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  .slideCircle {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    background-color: #DEDEDE;
+    box-shadow: 0px 1px 0px rgba(255,255,255,1), 0px 1px 0px rgba(0,0,0,0.1) inset;
+  }
+</style>
 
 <script>
   (function(){
+
     var num = 25;
     var demo = document.getElementById('boxDemo');
 
@@ -104,6 +127,21 @@ CSS3 transform property.
     moveCards(cards, function(){
       console.log('Animation complete');
     });
+
+    // -----------------------------------------------------------------
+    // Slide Demo ------------------------------------------------------
+    // -----------------------------------------------------------------
+
+    var slideCircle = document.getElementsByClassName('slideCircle')[0];
+    var slideX = -100;
+
+    setInterval(function(){
+      slideX = (slideX < 0) ? 150 : -150;
+      move(slideCircle, { x: slideX });
+    }, 1250);
+    
+
+
   })();
 
 </script>
