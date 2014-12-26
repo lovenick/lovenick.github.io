@@ -1,0 +1,47 @@
+body {
+  font-family: 'Merriweather', serif;
+  font-size: 18px;
+  line-height: 1.6em;
+  color: #333;
+  margin: 0;
+  padding: 10vh 4vh;
+}
+h1 {
+  font-size: 2em;
+  font-weight: 900;
+  line-height: 1.2em;
+  margin-top: 0;
+}
+.article {
+  position: relative;
+  display: block;
+  max-width: 900px;
+  margin: 0 auto;
+  clear: both;
+}
+.article .meta {
+  display: block;
+  max-width: 25%;
+  float: left;
+  color: #999;
+}
+@media screen and (max-width: 600px) {
+  .article .meta {
+    display: inline;
+    max-width: 100%;
+    float: initial;
+  }
+}
+.article .content {
+  display: block;
+  max-width: 70%;
+  float: right;
+  margin-bottom: 10vh;
+}
+@media screen and (max-width: 600px) {
+  .article .content {
+    display: inline-block;
+    float: initial;
+    max-width: 100%;
+  }
+}
