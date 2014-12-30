@@ -1,28 +1,35 @@
 ---
 layout: post-index
 description: "Software engineer, designer and javascript ninja. Building websites since 2001"
-tags: [Jekyll, theme, themes, responsive, blog, modern]
-image:
-  feature: desktop.jpg
 ---
 
 {% for post in paginator.posts %}
-<article class="hentry">
-  <header>
-    <div class="entry-meta"><span class="entry-date date published updated"><time datetime="{{ post.date | date_to_xmlschema }}"><a href="{{ site.url }}{{ post.url }}">{{ post.date | date: "%B %d, %Y" }}</a></time></span><span class="author vcard"><span class="fn"><a href="{{ site.url }}/about/" title="About {{ site.owner.name }}">{{ site.owner.name }}</a></span></span>{% if site.disqus_shortname and post.comments %}&nbsp; &bull; &nbsp;<span class="entry-comments"><a href="{{ site.url }}{{ post.url }}#disqus_thread">Comment</a></span>{% endif %}</div><!-- /.entry-meta -->
-    {% if post.link %}
-      <h1 class="entry-title"><a href="{{ site.url }}{{ post.url }}" rel="bookmark" title="{{ post.title }}"><i class="icon-double-angle-right"></i></a> <a href="{{ post.link }}">{{ post.title }}</a></h1>
-    {% else %}
-      <h1 class="entry-title"><a href="{{ site.url }}{{ post.url }}" rel="bookmark" title="{{ post.title }}" itemprop="url">{{ post.title }}</a></h1>
-    {% endif %}
-  </header>
-  <div class="entry-content">
-    {{ post.content }}
-  </div><!-- /.entry-content -->
-</article><!-- /.hentry -->
+
+  <div class="article">
+    
+    <div class="content">
+    
+      <div class="title">
+        <h1>{{ post.title }}</h1>
+
+        {% if post.subtitle %}
+          <h2>{{ post.subtitle }}</h2>
+        {% endif %}
+
+        <div class="meta">
+          <div class="date">{{ post.date | date: "%B %d, %Y" }}</div>
+        </div>  
+      </div>
+
+      {{ post.content }}
+
+    </div>
+
+  </div><!-- .article -->
+
 {% endfor %}
 
-<div class="pagination">
+<!-- <div class="pagination">
   {% if paginator.previous_page %}
     {% if paginator.previous_page == 1 %}
       <a href="{{ site.url }}" class="btn">Previous</a>
@@ -55,4 +62,4 @@ image:
   {% else %}
     Next
   {% endif %}
-</div><!-- /.pagination -->
+</div> -->
