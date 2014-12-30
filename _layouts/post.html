@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+{% include head.html %}
+</head>
+
+<body>
+
+  <div class="article">
+    
+    <div class="content">
+    
+      <div class="title">
+        <h1>{{ post.title }}</h1>
+
+        {% if post.subtitle %}
+          <h2>{{ post.subtitle }}</h2>
+        {% endif %}
+
+        <div class="meta">
+          <div class="date">{{ post.date | date: "%B %d, %Y" }}</div>
+        </div>  
+      </div>
+
+      {{ post.content }}
+
+    </div>
+
+  </div><!-- .article -->
+
+
+{% include footer.html %}
+
+{% include scripts.html %}          
+
+</body>
+</html>

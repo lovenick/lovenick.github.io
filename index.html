@@ -6,23 +6,21 @@ description: "Software engineer, designer and javascript ninja. Building website
 {% for post in paginator.posts %}
 
   <div class="article">
+
+    <div class="title">
+      <h1>{{ post.title }}</h1>
+
+      {% if post.subtitle %}
+        <h2>{{ post.subtitle }}</h2>
+      {% endif %}
+
+      <div class="meta">
+        <div class="date">{{ post.date | date: "%B %d, %Y" }}</div>
+      </div>  
+    </div>
     
     <div class="content">
-    
-      <div class="title">
-        <h1>{{ post.title }}</h1>
-
-        {% if post.subtitle %}
-          <h2>{{ post.subtitle }}</h2>
-        {% endif %}
-
-        <div class="meta">
-          <div class="date">{{ post.date | date: "%B %d, %Y" }}</div>
-        </div>  
-      </div>
-
       {{ post.content }}
-
     </div>
 
   </div><!-- .article -->
