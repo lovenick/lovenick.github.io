@@ -1,6 +1,7 @@
 body
 	font-family 'Raleway', sans-serif
 	font-size 22px
+	font-weight 400
 	line-height 1.5em
 	color rgba(90,90,90,1.0)
 	background-color rgba(250, 250, 250, 1.0)
@@ -17,15 +18,13 @@ h1
 	margin 0
 	padding 0 0 0.2em 0
 	text-shadow 0px 1px 0px rgba(255, 255, 255, 1.0)
-	text-align center
-
+	
 h2
 	font-size 1.75em
 	line-height 1em
 	font-weight 300
 	margin 0
-	padding 0
-	text-align center
+	padding 0 0 0.6em 0
 
 h3
 	font-size 1.4em
@@ -43,33 +42,24 @@ img
 .article
 	position relative
 	display block
-	max-width 900px
-	margin 0 auto
+	max-width 820px
+	margin 0 auto 3em auto
 	clear both
 	
-	.meta
-		display block
-		max-width 25%
-		font-size 0.8em
-		float left
-		color rgba(166, 173, 173, 1.0)
-		
-		@media screen and (max-width:600px)
-			display inline
-			max-width 100%
-			float initial
-	
 	.content
-		display block
-		max-width 70%
-		float right
-		margin-bottom 10vh
+		// margin-bottom 3em
+		
+		.meta
+			font-size 0.85em
+			color rgba(166, 173, 173, 1.0)
 		
 		.title
 			margin 0 0 3em 0
+			text-align center
 		
-		p:first-child
+		.intro
 			font-size 1.35em
+			line-height 1.5em
 		
 		@media screen and (max-width:600px)
 			display inline-block
