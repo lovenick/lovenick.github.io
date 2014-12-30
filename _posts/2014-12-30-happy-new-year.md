@@ -17,6 +17,7 @@ In no specific order, here's what I will achieve in 2015.
 * Swift - Develop and launch an app.
 * SaaS Apps - I've got a couple in mind and a couple almost at MVP - Time to launch and iterate.
 * Writing - It's obvious I'm not the best writer, 2015 will be the year I correct this.
+* Blog - Relates to the goal above. 
 * First Aid - Become certified in O.F.A level 1 or more.
 * Algorithms and Design Patterns - Learn more advanced techniques.
 * Design - It use to be my bread and butter, time to start putting pencil to paper (mouse to pixel?)
