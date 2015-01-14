@@ -1,0 +1,22 @@
+---
+layout: post
+title: Weekend Project - SMSFlow.co
+subtitle: Display SMS messages online using Node.js, MongoDB, Backbone  &amp; Stylus.
+tags: [javascript, thoughts]
+---
+
+Oddly, this past weekend, I found myself with some distraction free time. I figured it would be a great chance to revist some old JS favorites (Backbone) and play around with a newish SaaS business called [Plivo](http://www.plivo.com) (direct competitor to Twilio).
+
+Plivo is a service that allows developers to send and receive both voice calls and SMS message via an API. While similar to Twilio, Plivo has a couple pricing differences that made it more attractive for this project. 
+
+First, Plivo doesn't charge for incoming SMS messages, where as Twilio charges $0.0075 per message (clearly this would break the bank). Second, the local numbers are slightly cheaper ($1 versus $0.80 per month). 
+
+I realize pricing isn't the best model to base your SaaS decisions on, but since this was just a fun project, cheap is better. Plus, I've had extensive experience with Twilio, so I'm quite interested to see how Plivo tackles it.
+
+Instead of getting into the details of this project, I'm going to give a quick high-level overview. For the backend tech I used Node.js with Express, Mongoose and Jade (among the usual culprits of Underscore, Debug and Bunyan), while the front-end comprised of Backbone and Stylus.
+
+The project architecture is very simple; an SMS is sent to one of the local numbers in Plivo, which creates a POST request to a pre-configured endpoint. This Express endpoint parses the data, creates a Mongoose model and saves it to a MongoDB collection. The front-end is rendered via Backbone routes and the models / collections hit a RESTful API for data. That's it. Not bad for a couple hours of playing around.
+
+Consider [SMSFlow.co](http://www.smsflow.co) my own TODO MVC without the to do list. Future upgrades will include purchasing numbers, edit and sending messages, call forwarding and custom "chat rooms". All in due time.
+
+![SMSFlow.com Screenshot](/images/smsflow.png)
