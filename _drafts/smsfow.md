@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Weekend Project - SMSFlow.co
-subtitle: Display SMS messages online using Node.js, MongoDB, Backbone  &amp; Stylus.
+subtitle: SMS messaging using Node.js, MongoDB, Backbone  &amp; Stylus.
 tags: [javascript, thoughts]
 ---
 
