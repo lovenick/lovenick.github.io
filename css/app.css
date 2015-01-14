@@ -71,3 +71,8 @@ img {
   text-align: center;
   color: #69606b;
 }
+@media (max-width: 500px) {
+  body {
+    font-size: 4.5vw;
+  }
+}
