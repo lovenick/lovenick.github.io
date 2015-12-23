@@ -7,9 +7,15 @@ html, body {
 }
 
 body {
+  visibility: hidden; /* Stop the FUC */
   background-color: #283052;
   background: url('/img/bg-mountains-natural-sm.jpg') no-repeat;
   background-size: cover;
+  -webkit-transition: background-image 2s ease-in;
+  -moz-transition: background-image 2s ease-in;
+  -ms-transition: background-image 2s ease-in;
+  -o-transition: background-image 2s ease-in;
+  transition: background-image 2s ease-in;
 }
 
 .overlay {

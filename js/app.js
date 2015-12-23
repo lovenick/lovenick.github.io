@@ -4,8 +4,12 @@
   var preloadImg = document.createElement('img');
   var imgUrl = '/img/bg-mountains-natural.jpg';
 
+  // Stop the FUC
+  body.setAttribute('style', 'visibility: visible;');
+
   preloadImg.onload = function(e) {
-    body.setAttribute('style', 'background-image: url(' + imgUrl + ');');
+    var styles = body.getAttribute('style');
+    body.setAttribute('style', 'background-image: url(' + imgUrl + ');' + styles);
   };
 
   preloadImg.src = imgUrl;
